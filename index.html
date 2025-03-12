@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Code Generator</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Подключаем библиотеку qrcode.js с CDN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <button id="theme-toggle" aria-label="Toggle Theme">
+
+            <span class="icon">☀️</span>
+
+        </button>
+
+    </header>
+
+    <main class="container">
+
+        <h1>QR Code Generator</h1>
+
+        <p>Create a QR code for any URL. Enter a link, generate, and download the image!</p>
+
+        
+
+        <div class="qr-generator">
+
+            <div class="input-group">
+
+                <label for="url-input">Enter URL:</label>
+
+                <input type="url" id="url-input" placeholder="https://example.com" required>
+
+                <button id="generate-qr" class="generate-btn">Generate QR Code</button>
+
+            </div>
+
+            <div class="qr-output">
+
+                <canvas id="qr-canvas"></canvas>
+
+                <a id="download-qr" href="#" download="qr-code.png" style="display: none;">Download QR Code</a>
+
+            </div>
+
+        </div>
+
+       
+
+        <p>Want to see the code? Check it out on GitHub: <a href="https://github.com/example/qr-code-generator" target="_blank">https://github.com/example/qr-code-generator</a></p>
+
+        <p class="note">Note: Replace the link above with your own GitHub repository URL in the HTML file (search for "https://github.com/example/qr-code-generator").</p>
+
+    </main>
+
+    
+
+    <footer class="footer">
+
+        <div class="social">
+
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-twitter-x-3d-icon-download-in-png-blend-fbx-gltf-file-formats--logo-network-social-media-pack-logos-icons-8050016.png?f=webp" alt="Twitter Icon" class="twitter-icon">
+
+            <div>
+
+                <a href="https://twitter.com/HotDog850642" target="_blank">@HotDog850642</a>
+
+                <p>I'm a code developer. Feel free to reach out!</p>
+
+            </div>
+
+        </div>
+
+        <div class="donation">
+
+            <h3>For voluntary donations</h3>
+
+            <div class="btc-address">
+
+                <span id="btc-code">bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq</span>
+
+                <button class="copy-btn" data-target="btc-code">Copy</button>
+
+            </div>
+
+            <p class="thanks">Thank you for your support!</p>
+
+        </div>
+
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
